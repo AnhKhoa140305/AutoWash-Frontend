@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Container, Row, Col, Card, Table, Button, Modal, Form, ProgressBar } from 'react-bootstrap';
+import { Container, Row, Col, Card, Table, Button, Modal, Form, ProgressBar, Badge } from 'react-bootstrap';
 import { FiStar, FiCalendar, FiLogOut, FiPlus, FiClock, FiActivity, FiUser, FiTruck } from 'react-icons/fi';
 import { DataContext } from '../context/DataContext';
 import { AuthContext } from '../context/AuthContext';
