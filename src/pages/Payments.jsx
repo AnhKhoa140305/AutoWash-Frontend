@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Table, Row, Col, Form, Button, Modal, InputGroup } from 'react-bootstrap';
+import { Table, Row, Col, Form, Button, Modal, InputGroup, Badge } from 'react-bootstrap';
 import { FiDollarSign, FiSearch, FiPrinter, FiEye, FiDownload } from 'react-icons/fi';
 import { DataContext } from '../context/DataContext';
 import StatusBadge from '../components/StatusBadge';
