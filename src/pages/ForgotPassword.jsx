@@ -162,18 +162,23 @@ const ForgotPassword = () => {
 
             {step === 1 ? (
               /* --- STEP 1: ENTER EMAIL --- */
-              <div className="fade-in-section">
-                <div className="mb-4 text-center">
+              <div className="fade-in-section text-start">
+                <div className="mb-4">
+                  <Link to="/login" className="back-link text-decoration-none d-inline-flex align-items-center gap-1.5 mb-3" style={{ fontSize: '0.9rem', fontWeight: 500 }}>
+                    <FiArrowLeft /> Quay lại đăng nhập
+                  </Link>
                   <div 
                     className="bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center mb-3 mx-auto"
                     style={{ width: '80px', height: '80px', fontSize: '2.5rem' }}
                   >
                     <FiLock style={{ color: '#0A6EBD' }} />
                   </div>
-                  <h3 className="font-weight-bold text-dark mb-2">Quên mật khẩu?</h3>
-                  <p className="text-muted" style={{ fontSize: '0.9rem', lineHeight: '1.5' }}>
-                    Nhập email đã đăng ký, chúng tôi sẽ gửi hướng dẫn đặt lại mật khẩu vào email của bạn
-                  </p>
+                  <div className="text-center">
+                    <h3 className="font-weight-bold text-dark mb-2">Quên mật khẩu?</h3>
+                    <p className="text-muted" style={{ fontSize: '0.9rem', lineHeight: '1.5' }}>
+                      Nhập email đã đăng ký, chúng tôi sẽ gửi hướng dẫn đặt lại mật khẩu vào email của bạn
+                    </p>
+                  </div>
                 </div>
 
                 <Form onSubmit={handleRequestSubmit} noValidate>
@@ -223,12 +228,6 @@ const ForgotPassword = () => {
                     ) : 'Gửi yêu cầu'}
                   </Button>
                 </Form>
-
-                <div className="text-center mt-3">
-                  <Link to="/login" className="d-inline-flex align-items-center gap-1.5 text-secondary" style={{ textDecoration: 'none', fontWeight: 500 }}>
-                    <FiArrowLeft /> Quay lại đăng nhập
-                  </Link>
-                </div>
               </div>
             ) : (
               /* --- STEP 2: CHECK MAILBOX SUCCESS --- */

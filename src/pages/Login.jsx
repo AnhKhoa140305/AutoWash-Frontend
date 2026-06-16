@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { Form, Button, Row, Col, Spinner, InputGroup } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { FiEye, FiEyeOff, FiMail, FiLock, FiActivity } from 'react-icons/fi';
+import { FiEye, FiEyeOff, FiMail, FiLock, FiActivity, FiArrowLeft } from 'react-icons/fi';
 import { AuthContext } from '../context/AuthContext';
 
 const Login = () => {
@@ -170,6 +170,9 @@ const Login = () => {
             </div>
 
             <div className="mb-4">
+              <Link to="/" className="back-link text-decoration-none d-inline-flex align-items-center gap-1.5 mb-3" style={{ fontSize: '0.9rem', fontWeight: 500 }}>
+                <FiArrowLeft /> Quay lại trang chủ
+              </Link>
               <h3 className="font-weight-bold text-dark mb-1">Đăng nhập</h3>
               <p className="text-muted" style={{ fontSize: '0.9rem' }}>Vui lòng đăng nhập tài khoản để tiếp tục</p>
             </div>

@@ -429,3 +429,12 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.back-link {
+  color: var(--text-secondary);
+  transition: color var(--transition-speed) ease;
+}
+
+.back-link:hover {
+  color: var(--brand-primary) !important;
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Form, Button, Row, Col, Spinner, InputGroup, Alert } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { FiEye, FiEyeOff, FiMail, FiLock, FiUser, FiPhone, FiActivity } from 'react-icons/fi';
+import { FiEye, FiEyeOff, FiMail, FiLock, FiUser, FiPhone, FiActivity, FiArrowLeft } from 'react-icons/fi';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -212,6 +212,9 @@ const Register = () => {
             </div>
 
             <div className="mb-4">
+              <Link to="/" className="back-link text-decoration-none d-inline-flex align-items-center gap-1.5 mb-3" style={{ fontSize: '0.9rem', fontWeight: 500 }}>
+                <FiArrowLeft /> Quay lại trang chủ
+              </Link>
               <h3 className="font-weight-bold text-dark mb-1">Tạo tài khoản</h3>
               <p className="text-muted" style={{ fontSize: '0.9rem' }}>Đăng ký hội viên để đặt lịch rửa xe tự động</p>
             </div>
