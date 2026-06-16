@@ -15,6 +15,7 @@ import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword';
 import CustomerDashboard from './pages/CustomerDashboard';
 import ResetPassword from './pages/ResetPassword';
+import LandingPage from './pages/LandingPage';
 
 // Route Guard for Authenticated Users
 const RequireAuth = ({ children, allowedRoles }) => {
@@ -106,8 +107,8 @@ function App() {
             <Route path="/forgot-password" element={<GuestOnly><ForgotPassword /></GuestOnly>} />
             <Route path="/reset-password" element={<GuestOnly><ResetPassword /></GuestOnly>} />
 
-            {/* Root Route Redirect */}
-            <Route path="/" element={<RootRedirect />} />
+            {/* Root Route - Public Landing Page */}
+            <Route path="/" element={<LandingPage />} />
 
             {/* Customer Protected Route */}
             <Route 
