@@ -51,7 +51,7 @@ const LandingPage = () => {
                     style={{ backgroundColor: '#0A6EBD', borderColor: '#0A6EBD', fontWeight: 600, padding: '0.6rem 1.4rem', fontSize: '1rem', borderRadius: '10px' }}
                     className="btn-primary"
                   >
-                    Vào Dashboard
+                    {user?.role === 'ADMIN' ? 'Trang quản trị' : 'Trang cá nhân'}
                   </Button>
                   <Button variant="outline-danger" size="md" onClick={logout} className="d-flex align-items-center justify-content-center" style={{ padding: '0.6rem 0.8rem', borderRadius: '10px' }}>
                     <FiLogOut className="fs-5" />
@@ -77,7 +77,18 @@ const LandingPage = () => {
         <Container>
           <Row className="align-items-center g-5">
             <Col lg={6} className="text-center text-lg-start">
-              <Badge bg="primary-subtle" className="text-primary px-4 py-2.5 mb-4 rounded-pill" style={{ fontSize: '0.95rem', fontWeight: 600, border: '1px solid rgba(10, 110, 189, 0.2)', letterSpacing: '0.5px' }}>
+              <Badge 
+                className="px-4.5 py-3 mb-4 rounded-pill text-white" 
+                style={{ 
+                  background: 'linear-gradient(135deg, #0A6EBD 0%, #3b82f6 100%)', 
+                  fontSize: '1.15rem', 
+                  fontWeight: 700, 
+                  letterSpacing: '0.5px',
+                  boxShadow: '0 6px 20px rgba(10, 110, 189, 0.25)',
+                  border: 'none',
+                  display: 'inline-block'
+                }}
+              >
                 Hệ thống Rửa xe Tự động Công nghệ mới
               </Badge>
               <h1 className="display-3 text-dark mb-4" style={{ fontWeight: 900, lineHeight: 1.15, fontSize: '3.6rem', letterSpacing: '-1px' }}>
